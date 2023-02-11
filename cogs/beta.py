@@ -16,7 +16,7 @@ class Beta(commands.Cog):
     async def ask_gpt(self, ctx, *, prompt: str):
 	    await ctx.defer(ephemeral=False)
 	    result = generate_gpt3_response(user_text=prompt)
-	    embed=discord.Embed(description=f"**Query** : ```{prompt}```\n**Response**; ```{result}```", color=0x2f3136)
+	    embed=discord.Embed(description=f"**Query** : ```{prompt}```\n**Response**: ```{result}```", color=0x2f3136)
 	    await ctx.send(embed=embed)
 
 
